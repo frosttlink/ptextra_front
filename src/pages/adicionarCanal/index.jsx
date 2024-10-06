@@ -9,7 +9,6 @@ export default function AdicionarCanal() {
   const [numero, setNumero] = useState(0)
   const [aberto, setAberto] = useState(false)
 
-
   const { id } = useParams()
 
   async function salvar() {
@@ -52,7 +51,7 @@ useEffect(() => {
 
   return (
       <div className="pagina-adicionar-canal">
-        <h1>CADASTRAR</h1>
+        <h1>Cadastrar canal</h1>
 
           <div className='form'>
             <div>
@@ -63,13 +62,13 @@ useEffect(() => {
                 <label>Numero:</label>
                 <input type='number' value={numero} onChange={e => setNumero(e.target.value)}/>
             </div>
-            <div>
+            <div className="checkbox-container">
                 <label>Aberto:</label>
                 <input type='checkbox' checked={aberto} onChange={e => setAberto(e.target.checked)} />
             </div>
         </div>
 
-        <button onClick={salvar}> SALVAR </button>
+        <button onClick={salvar}> Salvar </button>
     </div>
   );
 }

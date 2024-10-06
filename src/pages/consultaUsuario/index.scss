@@ -2,13 +2,21 @@
 
 $cor-tabela: #fff;
 $cor-borda: #ddd;
+$cor-principal: #3498db; // A mesma cor principal usada anteriormente
+$cor-laranja: #e67e22; // Cor laranja para o link de alterar
 
 // Estilos da Página
-.pagina-consulta-canal {
+.pagina-consultar-usuario {
   background: $cor-tabela;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  
+  h1 {
+    color: $cor-principal;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 
   button {
     background-color: $cor-principal;
@@ -29,7 +37,6 @@ $cor-borda: #ddd;
     border-collapse: collapse;
     margin-top: 20px;
 
-
     th, td {
       padding: 10px;
       text-align: left;
@@ -48,7 +55,7 @@ $cor-borda: #ddd;
 
   a.alterar-link {
     display: inline-block; 
-    background-color: #e67e22; 
+    background-color: $cor-laranja; // Usando a cor laranja definida
     color: #fff; 
     text-decoration: none; 
     text-align: center;
@@ -56,9 +63,10 @@ $cor-borda: #ddd;
     border-radius: 5px; 
     transition: background-color 0.3s, transform 0.2s;
     width: 90%;
+    margin-top: 10px;
 
     &:hover {
-      background-color: darken(#e67e22, 10%);
+      background-color: darken($cor-laranja, 10%); // Efeito de hover mais escuro
       transform: scale(1.05); 
     }
   }
